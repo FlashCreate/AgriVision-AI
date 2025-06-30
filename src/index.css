@@ -1,0 +1,79 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AgriVision AI Design System */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 122 39% 49%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+
+    --accent: 120 46% 85%;
+    --accent-foreground: 24 9.8% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 122 39% 49%;
+
+    --radius: 0.75rem;
+
+    /* AgriVision specific colors */
+    --agri-green: 122 39% 49%;
+    --agri-light-green: 120 46% 85%;
+    --agri-earth: 28 84% 69%;
+    --agri-water: 200 98% 60%;
+    --agri-warning: 45 93% 47%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --primary: 122 39% 49%;
+    --agri-green: 122 39% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .agri-gradient {
+    background: linear-gradient(135deg, hsl(var(--agri-green)) 0%, hsl(var(--agri-light-green)) 100%);
+  }
+  
+  .earth-gradient {
+    background: linear-gradient(135deg, hsl(var(--agri-earth)) 0%, #f4a261 100%);
+  }
+  
+  .water-gradient {
+    background: linear-gradient(135deg, hsl(var(--agri-water)) 0%, #219ebc 100%);
+  }
+}
